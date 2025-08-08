@@ -1,11 +1,12 @@
 ---
 allowed-tools: Bash(cargo fmt *:*)
-description: Format Rust code using cargo fmt
+description: Format Rust code in rust_project using cargo fmt
 ---
 
-Goal: Format all Rust sources in this workspace.
+Goal: Format all Rust sources in rust_project.
 
 Instructions:
-- Run `cargo fmt --all`.
-- If the workspace is not initialized yet, explain and stop.
+- Ensure the Rust project exists at ./rust_project (with Cargo.toml).
+- Run `cargo fmt --manifest-path rust_project/Cargo.toml`.
 - Report changed files succinctly.
+- If rust_project is missing, explain and stop.

@@ -1,11 +1,12 @@
 ---
 allowed-tools: Bash(cargo clippy *:*)
-description: Lint Rust code with clippy (deny warnings)
+description: Lint rust_project with clippy (deny warnings)
 ---
 
-Goal: Lint the workspace with strict clippy settings.
+Goal: Lint rust_project with strict clippy settings.
 
 Instructions:
-- Run `cargo clippy --all-targets -- -D warnings`.
+- Ensure the Rust project exists at ./rust_project (with Cargo.toml).
+- Run `cargo clippy --manifest-path rust_project/Cargo.toml --all-targets -- -D warnings`.
 - Summarize key diagnostics. Suggest fixes if common lints are triggered.
-- If the workspace is not initialized yet, explain and stop.
+- If rust_project is missing, explain and stop.
